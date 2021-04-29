@@ -39,6 +39,7 @@ main {
   .top-section {
     width: 100%;
     display: flex;
+    margin-bottom: 3rem;
 
     .product-breif {
       width: 40%;
@@ -87,6 +88,112 @@ main {
 
         &:nth-child(2) {
           transform: translateX(-10%);
+        }
+      }
+    }
+  }
+
+  .bottom-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .review-wrapper {
+      width: 350px;
+      background-color: var(--purple);
+      padding: 2rem;
+      border-radius: 0.5rem;
+
+      .upper-div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        img {
+          width: 40px;
+          border-radius: 100%;
+          margin-right: 25px;
+        }
+
+        .header-wrapper {
+          p {
+            font-weight: 500;
+            color: var(--white);
+          }
+
+          span {
+            font-weight: 400;
+            font-size: 12px;
+            color: var(--soft-pink);
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+
+      .review-text {
+        color: var(--bg-pink);
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      &:nth-child(2) {
+        transform: translateY(10%);
+      }
+
+      &:nth-child(3) {
+        transform: translateY(20%);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1125px) {
+  main {
+    height: 80vh;
+    min-height: 80vh;
+    justify-content: flex-start;
+    .top-section {
+      flex-direction: column;
+      align-items: center;
+      height: 60%;
+
+      .product-breif {
+        text-align: center;
+
+        h1 {
+          font-size: 38px;
+        }
+
+        p {
+          font-size: 14px;
+          margin: 2rem 0 1rem 0;
+        }
+      }
+
+      .product-rating {
+        justify-content: space-evenly;
+        width: 40%;
+
+        .rating-wrapper {
+          width: 100%;
+          height: 28%;
+          flex-direction: column;
+          justify-content: space-evenly;
+
+          div {
+            width: 35%;
+            display: flex;
+            justify-content: space-around;
+          }
+
+          &:nth-child(1) {
+            transform: none;
+          }
+
+          &:nth-child(2) {
+            transform: none;
+          }
         }
       }
     }
