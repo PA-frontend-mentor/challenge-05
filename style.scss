@@ -23,6 +23,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 main {
@@ -149,17 +150,23 @@ main {
 }
 
 @media only screen and (max-width: 1125px) {
+  body {
+    height: max-content;
+    min-height: 100vh;
+  }
+
   main {
-    height: 80vh;
-    min-height: 80vh;
     justify-content: flex-start;
+    padding: 7vh;
+
     .top-section {
       flex-direction: column;
       align-items: center;
-      height: 60%;
+      min-height: 465px;
 
       .product-breif {
         text-align: center;
+        min-width: 375px;
 
         h1 {
           font-size: 38px;
@@ -174,6 +181,8 @@ main {
       .product-rating {
         justify-content: space-evenly;
         width: 40%;
+        min-width: 375px;
+        height: 0;
 
         .rating-wrapper {
           width: 100%;
@@ -194,6 +203,24 @@ main {
           &:nth-child(2) {
             transform: none;
           }
+        }
+      }
+    }
+
+    .bottom-section {
+      flex-direction: column;
+      height: 65vh;
+
+      .review-wrapper {
+        min-width: 375px;
+        // margin-bottom: 20px;
+
+        &:nth-child(2) {
+          transform: none;
+        }
+
+        &:nth-child(3) {
+          transform: none;
         }
       }
     }
